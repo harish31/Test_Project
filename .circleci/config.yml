@@ -17,17 +17,17 @@
 jobs:
   build:
     docker:
-      - image: circleci/base
+      - image: node
     steps:
       - run: echo "This job represents a typical build job"
   deploy:
     docker:
-      - image: circleci/base
+      - image: node
     steps:
       - run: echo "This job represents a typical deploy job"
   test:
     docker:
-      - image: circleci/base
+      - image: node
     steps:
       - run: echo "This job represents a typical test job"
 orbs:
