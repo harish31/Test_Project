@@ -4,7 +4,7 @@ version: 2.1
 orbs:
   # Declare a dependency on the welcome-orb
  # welcome: circleci/welcome-orb@0.3.1
-  sumologic: circleci/sumologic@1.0.0
+  sumologic: circleci/sumologic@1.0.1
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
@@ -13,9 +13,29 @@ workflows:
 #    jobs:
 #      - welcome/run
    
+  jobs:
+  build:
+    docker:
+      - image: cimg/node
+    steps:
+      - run: echo "This job represents a typical build job"
+  deploy:
+    docker:
+      - image: cimg/node
+    steps:
+      - run: echo "This job represents a typical deploy job"
+  test:
+    docker:
+      - image: cimg/node
+    steps:
+      - run: echo "This job represents a typical test job"
+orbs:
+  sumologic: circleci/sumologic@1.0.1
+version: 2.1
+workflows:
   build-test-and-deploy:
     jobs:
-      - sumologic/workflow-collector # add this job to track workflow.
+      - sumologic/workflow-collector
       - build
       - test:
           requires:
