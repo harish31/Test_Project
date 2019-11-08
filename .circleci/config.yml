@@ -13,7 +13,8 @@
 #    jobs:
 #      - welcome/run
    
-  jobs:
+
+jobs:
   build:
     docker:
       - image: cimg/node
