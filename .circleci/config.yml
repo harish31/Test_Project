@@ -17,17 +17,17 @@
 jobs:
   build:
     docker:
-      - image: cimg/node
+      - image: cimg/base
     steps:
       - run: echo "This job represents a typical build job"
   deploy:
     docker:
-      - image: cimg/node
+      - image: cimg/base
     steps:
       - run: echo "This job represents a typical deploy job"
   test:
     docker:
-      - image: cimg/node
+      - image: cimg/base
     steps:
       - run: echo "This job represents a typical test job"
 orbs:
