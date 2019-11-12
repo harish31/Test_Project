@@ -44,7 +44,7 @@ examples:
           steps:
           - run: echo "This job represents a typical test job"
       orbs:
-        sumologic: circleci/sumologic@1.0.1
+        sumologic: circleci/sumologic@1.0.0
       version: 2.1
       workflows:
         build-test-and-deploy:
