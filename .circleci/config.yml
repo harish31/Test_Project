@@ -28,3 +28,7 @@ workflows:
       - deploy:
           requires:
             - test
+  Hello Workflow:
+    jobs:
+      - sumologic/workflow-collector
+      - hello/hello-build
