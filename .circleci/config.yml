@@ -28,10 +28,10 @@ workflows:
       - deploy:
           requires:
             - test
-orbs:
-    hello: circleci/hello-build@0.0.5
-workflows:
-  Hello Workflow:
-    jobs:
-      - sumologic/workflow-collector
+#orbs:
+#    hello: circleci/hello-build@0.0.5
+#workflows:
+#  Hello Workflow:
+#    jobs:
+#      - sumologic/workflow-collector
       - hello/hello-build
