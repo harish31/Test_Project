@@ -1,3 +1,5 @@
+experimental:
+  pipelines: true
 jobs:
   build:
     docker:
