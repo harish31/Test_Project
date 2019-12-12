@@ -18,17 +18,17 @@ orbs:
   sumologic: circleci/sumologic@1.0.2
   hello-build: circleci/hello-build@0.0.14
 version: 2.1
-workflows:
-  build-test-and-deploy:
-    jobs:
-      - sumologic/workflow-collector
-      - build
-      - test:
-          requires:
-            - build
-      - deploy:
-          requires:
-            - test
+#workflows:
+#  build-test-and-deploy:
+#    jobs:
+#      - sumologic/workflow-collector
+#      - build
+#      - test:
+#          requires:
+#            - build
+#      - deploy:
+#          requires:
+#            - test
   Hello Workflow:
     jobs:
       - sumologic/workflow-collector
