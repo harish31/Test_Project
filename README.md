@@ -1,21 +1,8 @@
-# order-persistence
+# Sumologic Orb
+https://circleci.com/orbs/registry/orb/circleci/sumologic
 
-# Maven Release
-To release artifacts call below API URL
-curl -X POST -H "Content-Type: application/json" -d @body.json "https://circleci.com/api/v1.1/project/github/scoperetail/customer-order-persistence?circle-token={TOKEN}"
+Easily capture analytics from your CircleCI jobs in your Sumologic dashboard!
 
-{TOKEN} = CircleCi API Token which has build invocation permission
-
-Contents of body.json
-```
-{
-   "build_parameters": {
-                         "RELEASE": "Yes",
-                         "GIT_USER_EMAIL": "",
-                         "GIT_USER_NAME": ""
-                       }
-}
-```
-<h3>Note:</h3> Update username and email in body.json
-
+## workflow-collector
+Add this job to your workflow with no require statements. This job will run in parallel with the rest of your workflow for monitoring and will exit when all other jobs have completed.
 
